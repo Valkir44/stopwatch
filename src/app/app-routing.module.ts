@@ -1,11 +1,20 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {Routes, RouterModule} from '@angular/router';
+import {TimerContainerPageComponent} from "./modules/timer/page/timer-container.page/timer-container.page.component";
+import {CommonModule} from "@angular/common";
 
 
-const routes: Routes = [];
+const routes: Routes = [
+    {
+        path: '',
+        component: TimerContainerPageComponent,
+        pathMatch: 'full',
+    },
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+    imports: [CommonModule, RouterModule.forRoot(routes)],
+    exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}

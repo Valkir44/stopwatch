@@ -1,0 +1,12 @@
+<ul *ngIf="lapArr.length > 0" class="lap__list">
+    <li *ngFor="let lap of lapArr" class="lap__list-item">
+        <div class="lap">
+            <div>{{lap.minutes}}</div>
+            <div class="delimiters two-points">:</div>
+            <div>{{lap.seconds}}</div>
+            <div class="delimiters">.</div>
+            <div>{{lap.milliseconds | slice:0:2}}</div>
+        </div>
+        <button class="remove-lap" (click)="remove(lap.id)">remove</button>
+    </li>
+</ul>

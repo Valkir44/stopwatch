@@ -1,0 +1,42 @@
+.lap__list {
+  list-style: none;
+  padding: 0;
+
+  .lap__list-item {
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-between;
+
+    &:hover {
+      .remove-lap {
+        color: #fff;
+        background: #FF0000;
+        transition: all 0.4s;
+      }
+    }
+
+    .lap {
+      color: #fff;
+      display: flex;
+      font-size: 25px;
+
+      .two-points {
+        line-height: 24px;
+      }
+
+      .delimiters {
+        margin: 0 3px;
+      }
+    }
+
+    .remove-lap {
+      border: none;
+      outline: none;
+      color: #3b3b3b;
+      cursor: pointer;
+      background: #3b3b3b;
+      text-transform: uppercase;
+    }
+  }
+}
+
